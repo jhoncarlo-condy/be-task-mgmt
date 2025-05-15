@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterFormRequest;
 use App\Http\Services\RegisterService;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 
-class RegisterController
+class RegisterController extends Controller
 {
     public function register(
         RegisterFormRequest $request,
