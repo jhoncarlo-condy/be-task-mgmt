@@ -12,14 +12,19 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
+    public const TYPE_ADMIN = 1;
+    public const TYPE_USER = 2;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
+        'user_type',
         'password',
     ];
 
@@ -44,5 +49,15 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->user_type === self::TYPE_ADMIN;
+    }
+
+    public function isUser(): bool
+    {
+        return $this->user_type === self::TYPE_USER;
     }
 }
