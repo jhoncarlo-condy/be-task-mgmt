@@ -55,4 +55,10 @@ class User extends Authenticatable
     {
         return $this->user_type === self::TYPE_USER;
     }
+
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }

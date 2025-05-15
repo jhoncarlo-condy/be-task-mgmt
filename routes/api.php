@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Task\TaskController;
 use App\Http\Controllers\User\LoginController;
 use App\Http\Controllers\User\RegisterController;
 use App\Http\Controllers\User\UserController;
@@ -21,4 +22,6 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/all', [UserController::class, 'index']);
         Route::get('/{email}', [UserController::class, 'show']);
     });
+
+     Route::apiResource('/tasks', TaskController::class);
 });
