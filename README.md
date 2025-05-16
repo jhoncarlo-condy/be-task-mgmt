@@ -46,6 +46,8 @@ https://task-mgmt.postman.co/workspace/task-mgmt~a73a2de9-a59b-4fbc-944f-61f57bb
 ## 🖥️ Frontend (Vue.js)
 
 - **Vue Router** for navigation
-- **Pinia** or **Vuex** for state management
+- **Pinia** for state management
 - Axios to interact with Laravel API
-- Composition API and reusable components
+- Composition API 
+- shadcn/vue for reusable components
+- tanstack/query for asynchronus state and data handling
