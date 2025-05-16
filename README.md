@@ -6,10 +6,10 @@ A full-stack task management system built with **Laravel** (API backend) and **V
 
 ## 🧱 Tech Stack
 
-- **Backend:** Laravel 10+
+- **Backend:** Laravel 11
 - **Frontend:** Vue.js 3 (Composition API)
-- **Database:** MySQL / PostgreSQL
-- **Authentication:** Laravel Sanctum / Passport
+- **Database:** MySQL 
+- **Authentication:** Laravel Sanctum
 
 ---
 
