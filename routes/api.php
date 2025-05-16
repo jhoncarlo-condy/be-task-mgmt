@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Task\TaskController;
+use App\Http\Controllers\Task\UserTaskController;
 use App\Http\Controllers\User\LoginController;
 use App\Http\Controllers\User\RegisterController;
 use App\Http\Controllers\User\UserController;
@@ -16,6 +17,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/profile', [UserController::class, 'profile']);
         Route::put('/{email}', [UserController::class, 'update']);
         Route::post('/change-password', [UserController::class, 'changePassword']);
+
+        Route::get('/statistics', [UserTaskController::class, 'statistics']);
     });
 
     Route::middleware('is_admin')->prefix('user')->group(function () {
