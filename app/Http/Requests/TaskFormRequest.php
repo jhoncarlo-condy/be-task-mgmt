@@ -34,7 +34,6 @@ class TaskFormRequest extends FormRequest
         return [
             'title'       => ['required', 'string', 'max:50', Rule::unique('tasks','title')->where(fn (Builder $query) => $query->where('user_id', Auth::user()->id))],
             'description' => ['required', 'string', 'max: 500'],
-            'status'      => ['required', Rule::enum(Status::class)],
             'priority'    => ['required', Rule::enum(Priority::class)],
         ];
     }
